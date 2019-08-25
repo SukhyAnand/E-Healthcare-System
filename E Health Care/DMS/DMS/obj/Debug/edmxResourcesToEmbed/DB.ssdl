@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EHealthCareModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EHealthCareModelStoreContainer">
+    <EntitySet Name="AppoDetails" EntityType="EHealthCareModel.Store.AppoDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DoctorsDetails" EntityType="EHealthCareModel.Store.DoctorsDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HospitaMaster" EntityType="EHealthCareModel.Store.HospitaMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MedicineDetails" EntityType="EHealthCareModel.Store.MedicineDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PatientDetails" EntityType="EHealthCareModel.Store.PatientDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReviewDetails" EntityType="EHealthCareModel.Store.ReviewDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoleDetails" EntityType="EHealthCareModel.Store.RoleDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserDetails" EntityType="EHealthCareModel.Store.UserDetails" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="AppoDetails">
+    <Key>
+      <PropertyRef Name="Appo_Id" />
+    </Key>
+    <Property Name="Appo_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Doc_Id" Type="int" />
+    <Property Name="Appo_Date" Type="nvarchar(max)" />
+    <Property Name="Patient_Id" Type="int" />
+    <Property Name="User_Id" Type="nvarchar(max)" />
+    <Property Name="IsConfirm" Type="bit" />
+    <Property Name="Appo_Hospital" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DoctorsDetails">
+    <Key>
+      <PropertyRef Name="Doc_Id" />
+    </Key>
+    <Property Name="Doc_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Doc_Name" Type="nvarchar(max)" />
+    <Property Name="Doc_Country" Type="nvarchar(max)" />
+    <Property Name="Doc_State" Type="nvarchar(max)" />
+    <Property Name="Doc_Hospital" Type="nvarchar(max)" />
+    <Property Name="Doc_Specialist" Type="nvarchar(max)" />
+    <Property Name="Doc_RegId" Type="nvarchar(max)" />
+    <Property Name="Doc_Exp" Type="nvarchar(max)" />
+    <Property Name="Doc_Details" Type="nvarchar(max)" />
+    <Property Name="Doc_Home_Fee" Type="nvarchar(max)" />
+    <Property Name="Doc_OnSite_Fee" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HospitaMaster">
+    <Key>
+      <PropertyRef Name="Hospital_Id" />
+    </Key>
+    <Property Name="Hospital_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Hospital_Name" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="Hospital_Full_Address" Type="nvarchar(max)" />
+    <Property Name="Hospital_Details" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MedicineDetails">
+    <Key>
+      <PropertyRef Name="Med_Id" />
+    </Key>
+    <Property Name="Med_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Med_Name" Type="nvarchar(max)" />
+    <Property Name="Med_Composition" Type="nvarchar(max)" />
+    <Property Name="Med_Disease" Type="nvarchar(max)" />
+    <Property Name="Med_Price" Type="int" />
+  </EntityType>
+  <EntityType Name="PatientDetails">
+    <Key>
+      <PropertyRef Name="Patient_Id" />
+    </Key>
+    <Property Name="Patient_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Patient_State" Type="nvarchar(max)" />
+    <Property Name="Patient_Country" Type="nvarchar(max)" />
+    <Property Name="Patient_Hospital" Type="nvarchar(max)" />
+    <Property Name="Patient_Disease" Type="nvarchar(max)" />
+    <Property Name="Patient_Age" Type="nvarchar(max)" />
+    <Property Name="Patient_Gender" Type="nvarchar(max)" />
+    <Property Name="Patient_Report" Type="nvarchar(max)" />
+    <Property Name="Patient_Name" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="User_Id" Type="int" />
+    <Property Name="Appo_Id" Type="varchar" MaxLength="9" StoreGeneratedPattern="Computed" />
+    <Property Name="Doc_Id" Type="int" />
+    <Property Name="Appo_Date" Type="nvarchar(max)" />
+    <Property Name="IsConfirm" Type="bit" />
+  </EntityType>
+  <EntityType Name="ReviewDetails">
+    <Key>
+      <PropertyRef Name="Review_id" />
+    </Key>
+    <Property Name="Review_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rating" Type="int" />
+    <Property Name="Review_Text" Type="nvarchar(max)" />
+    <Property Name="Review_Date" Type="nvarchar(max)" />
+    <Property Name="Raised_By" Type="int" />
+    <Property Name="User_Role" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="RoleDetails">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Role" Type="nvarchar(max)" />
+    <Property Name="Role_Details" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="User_Name" Type="nvarchar(max)" />
+    <Property Name="User_Password" Type="nvarchar(max)" />
+    <Property Name="User_Phone" Type="nvarchar(max)" />
+    <Property Name="User_Mail" Type="nvarchar(max)" />
+    <Property Name="User_Country" Type="nvarchar(max)" />
+    <Property Name="User_Gender" Type="nvarchar(max)" />
+    <Property Name="User_DOB" Type="nvarchar(max)" />
+    <Property Name="User_Photo" Type="image" />
+    <Property Name="Role_Id" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+</Schema>

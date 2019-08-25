@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DMS.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <asp:Image ID="imgSite" runat="server" alt="Document Management System" Width="100%" Height="200px" ImageUrl="~/Images/MAC-website-banner-10-critical-lessons.png" />
+                    <%--<img alt="Document Management System" width="100%" height="10%" src="Images/banner-dms.jpg" />--%>
+                    <%--<h1>
+                    DOCUMENT MANAGEMENT SYSTEM
+                </h1>--%>
+                </div>
+                <div class="loginDisplay">
+                    
+                            
+                              <asp:LinkButton ID="lnkHeadLoginStatus" runat="server" OnClick="lnkHeadLoginStatus_Click">Log In</asp:LinkButton>
+                              
+                        
+                            Welcome &nbsp<span class="bold">
+                             <%--   <asp:LoginName ID="HeadLoginName" runat="server" />--%>
+                                <asp:Label ID="lblHeadLoginName" runat="server" Text=""></asp:Label>
+                               
+                            </span>!
+                            
+                              <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Log Out</asp:LinkButton>
+                            
+                        
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="About" />
+                        </Items>
+                    </asp:Menu>
+                </div>
+               
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

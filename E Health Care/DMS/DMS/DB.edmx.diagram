@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="87065d6f552d454b809581120ec08b36" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="EHealthCareModel.DoctorsDetail" Width="1.5" PointX="5.1365971496033467" PointY="9.0786460382298788" />
+        <EntityTypeShape EntityType="EHealthCareModel.HospitaMaster" Width="1.5" PointX="3.6913884206169234" PointY="1.7398984291310879" />
+        <EntityTypeShape EntityType="EHealthCareModel.MedicineDetail" Width="1.5" PointX="1.935526980988461" PointY="14.551461763005452" />
+        <EntityTypeShape EntityType="EHealthCareModel.RoleDetail" Width="1.5" PointX="6.5275661416945825" PointY="0.8112887445889827" />
+        <EntityTypeShape EntityType="EHealthCareModel.UserDetail" Width="1.5" PointX="2.5" PointY="10.75" />
+        <EntityTypeShape EntityType="EHealthCareModel.AppoDetail" Width="1.5" PointX="5.125" PointY="13.5" />
+        <EntityTypeShape EntityType="EHealthCareModel.PatientDetail" Width="1.5" PointX="5.9177952864755854" PointY="22.156684423869795" />
+        <EntityTypeShape EntityType="EHealthCareModel.ReviewDetail" Width="1.5" PointX="9.9272586265240133" PointY="26.310489324066083" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

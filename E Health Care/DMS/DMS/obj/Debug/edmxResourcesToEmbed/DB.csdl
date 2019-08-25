@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EHealthCareModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EHealthCareEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DoctorsDetails" EntityType="EHealthCareModel.DoctorsDetail" />
+    <EntitySet Name="HospitaMasters" EntityType="EHealthCareModel.HospitaMaster" />
+    <EntitySet Name="MedicineDetails" EntityType="EHealthCareModel.MedicineDetail" />
+    <EntitySet Name="RoleDetails" EntityType="EHealthCareModel.RoleDetail" />
+    <EntitySet Name="UserDetails" EntityType="EHealthCareModel.UserDetail" />
+    <EntitySet Name="AppoDetails" EntityType="EHealthCareModel.AppoDetail" />
+    <EntitySet Name="PatientDetails" EntityType="EHealthCareModel.PatientDetail" />
+    <EntitySet Name="ReviewDetails" EntityType="EHealthCareModel.ReviewDetail" />
+  </EntityContainer>
+  <EntityType Name="DoctorsDetail">
+    <Key>
+      <PropertyRef Name="Doc_Id" />
+    </Key>
+    <Property Type="Int32" Name="Doc_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Doc_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_State" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Hospital" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Specialist" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_RegId" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Exp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Details" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_Home_Fee" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Doc_OnSite_Fee" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="Int32" Name="User_Id" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HospitaMaster">
+    <Key>
+      <PropertyRef Name="Hospital_Id" />
+    </Key>
+    <Property Type="Int32" Name="Hospital_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Hospital_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hospital_Full_Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Hospital_Details" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MedicineDetail">
+    <Key>
+      <PropertyRef Name="Med_Id" />
+    </Key>
+    <Property Type="Int32" Name="Med_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Med_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Med_Composition" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Med_Disease" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Med_Price" />
+  </EntityType>
+  <EntityType Name="RoleDetail">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Type="Int32" Name="Role_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Role" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Role_Details" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Type="Int32" Name="User_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="User_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Password" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Phone" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Mail" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_Gender" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="User_DOB" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="User_Photo" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="Role_Id" />
+    <Property Type="Boolean" Name="IsActive" />
+  </EntityType>
+  <EntityType Name="AppoDetail">
+    <Key>
+      <PropertyRef Name="Appo_Id" />
+    </Key>
+    <Property Type="Int32" Name="Appo_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Doc_Id" />
+    <Property Type="String" Name="Appo_Date" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Patient_Id" />
+    <Property Type="String" Name="User_Id" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsConfirm" />
+    <Property Type="String" Name="Appo_Hospital" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PatientDetail">
+    <Key>
+      <PropertyRef Name="Patient_Id" />
+    </Key>
+    <Property Type="Int32" Name="Patient_Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Patient_State" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Country" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Hospital" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Disease" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Age" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Gender" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Report" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Patient_Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Int32" Name="User_Id" />
+    <Property Type="String" Name="Appo_Id" MaxLength="9" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Int32" Name="Doc_Id" />
+    <Property Type="String" Name="Appo_Date" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsConfirm" />
+  </EntityType>
+  <EntityType Name="ReviewDetail">
+    <Key>
+      <PropertyRef Name="Review_id" />
+    </Key>
+    <Property Type="Int32" Name="Review_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Rating" />
+    <Property Type="String" Name="Review_Text" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Review_Date" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Raised_By" />
+    <Property Type="String" Name="User_Role" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

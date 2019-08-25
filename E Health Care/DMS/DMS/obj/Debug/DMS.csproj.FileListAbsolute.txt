@@ -1,0 +1,25 @@
+D:\DMS\DMS\bin\DMS.dll
+D:\DMS\DMS\bin\DMS.pdb
+D:\DMS\DMS\obj\Debug\ResolveAssemblyReference.cache
+D:\DMS\DMS\obj\Debug\DMS.dll
+D:\DMS\DMS\obj\Debug\DMS.pdb
+C:\Users\Samik\Downloads\DMS\DMS\bin\DMS.dll
+C:\Users\Samik\Downloads\DMS\DMS\bin\DMS.pdb
+C:\Users\Samik\Downloads\DMS\DMS\obj\Debug\DMS.csprojResolveAssemblyReference.cache
+C:\Users\Samik\Downloads\DMS\DMS\obj\Debug\DMS.dll
+C:\Users\Samik\Downloads\DMS\DMS\obj\Debug\DMS.pdb
+D:\E Health Care\DMS\DMS\bin\DMS.dll
+D:\E Health Care\DMS\DMS\bin\DMS.pdb
+D:\E Health Care\DMS\DMS\obj\Debug\DMS.csprojResolveAssemblyReference.cache
+D:\E Health Care\DMS\DMS\obj\Debug\DMS.dll
+D:\E Health Care\DMS\DMS\obj\Debug\DMS.pdb
+D:\E Health Care\DMS\DMS\bin\EntityFramework.dll
+D:\E Health Care\DMS\DMS\bin\EntityFramework.xml
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\bin\DMS.dll.config
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\bin\DMS.dll
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\bin\DMS.pdb
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\bin\EntityFramework.dll
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\bin\EntityFramework.xml
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\obj\Debug\DMS.csprojResolveAssemblyReference.cache
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\obj\Debug\DMS.dll
+C:\Users\Sukhpreet\Desktop\7th sem project + industrial training\E-Health care system (7th sem project)\E-healthcare project folder\E Health Care\DMS\DMS\obj\Debug\DMS.pdb

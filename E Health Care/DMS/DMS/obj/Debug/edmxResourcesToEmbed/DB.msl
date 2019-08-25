@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EHealthCareModelStoreContainer" CdmEntityContainer="EHealthCareEntities">
+    <EntitySetMapping Name="DoctorsDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.DoctorsDetail">
+        <MappingFragment StoreEntitySet="DoctorsDetails">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Doc_OnSite_Fee" ColumnName="Doc_OnSite_Fee" />
+          <ScalarProperty Name="Doc_Home_Fee" ColumnName="Doc_Home_Fee" />
+          <ScalarProperty Name="Doc_Details" ColumnName="Doc_Details" />
+          <ScalarProperty Name="Doc_Exp" ColumnName="Doc_Exp" />
+          <ScalarProperty Name="Doc_RegId" ColumnName="Doc_RegId" />
+          <ScalarProperty Name="Doc_Specialist" ColumnName="Doc_Specialist" />
+          <ScalarProperty Name="Doc_Hospital" ColumnName="Doc_Hospital" />
+          <ScalarProperty Name="Doc_State" ColumnName="Doc_State" />
+          <ScalarProperty Name="Doc_Country" ColumnName="Doc_Country" />
+          <ScalarProperty Name="Doc_Name" ColumnName="Doc_Name" />
+          <ScalarProperty Name="Doc_Id" ColumnName="Doc_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HospitaMasters">
+      <EntityTypeMapping TypeName="EHealthCareModel.HospitaMaster">
+        <MappingFragment StoreEntitySet="HospitaMaster">
+          <ScalarProperty Name="Hospital_Details" ColumnName="Hospital_Details" />
+          <ScalarProperty Name="Hospital_Full_Address" ColumnName="Hospital_Full_Address" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Hospital_Name" ColumnName="Hospital_Name" />
+          <ScalarProperty Name="Hospital_Id" ColumnName="Hospital_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicineDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.MedicineDetail">
+        <MappingFragment StoreEntitySet="MedicineDetails">
+          <ScalarProperty Name="Med_Price" ColumnName="Med_Price" />
+          <ScalarProperty Name="Med_Disease" ColumnName="Med_Disease" />
+          <ScalarProperty Name="Med_Composition" ColumnName="Med_Composition" />
+          <ScalarProperty Name="Med_Name" ColumnName="Med_Name" />
+          <ScalarProperty Name="Med_Id" ColumnName="Med_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.RoleDetail">
+        <MappingFragment StoreEntitySet="RoleDetails">
+          <ScalarProperty Name="Role_Details" ColumnName="Role_Details" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetails">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+          <ScalarProperty Name="User_Photo" ColumnName="User_Photo" />
+          <ScalarProperty Name="User_DOB" ColumnName="User_DOB" />
+          <ScalarProperty Name="User_Gender" ColumnName="User_Gender" />
+          <ScalarProperty Name="User_Country" ColumnName="User_Country" />
+          <ScalarProperty Name="User_Mail" ColumnName="User_Mail" />
+          <ScalarProperty Name="User_Phone" ColumnName="User_Phone" />
+          <ScalarProperty Name="User_Password" ColumnName="User_Password" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AppoDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.AppoDetail">
+        <MappingFragment StoreEntitySet="AppoDetails">
+          <ScalarProperty Name="Appo_Hospital" ColumnName="Appo_Hospital" />
+          <ScalarProperty Name="IsConfirm" ColumnName="IsConfirm" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Patient_Id" ColumnName="Patient_Id" />
+          <ScalarProperty Name="Appo_Date" ColumnName="Appo_Date" />
+          <ScalarProperty Name="Doc_Id" ColumnName="Doc_Id" />
+          <ScalarProperty Name="Appo_Id" ColumnName="Appo_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.PatientDetail">
+        <MappingFragment StoreEntitySet="PatientDetails">
+          <ScalarProperty Name="IsConfirm" ColumnName="IsConfirm" />
+          <ScalarProperty Name="Appo_Date" ColumnName="Appo_Date" />
+          <ScalarProperty Name="Doc_Id" ColumnName="Doc_Id" />
+          <ScalarProperty Name="Appo_Id" ColumnName="Appo_Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+          <ScalarProperty Name="Patient_Report" ColumnName="Patient_Report" />
+          <ScalarProperty Name="Patient_Gender" ColumnName="Patient_Gender" />
+          <ScalarProperty Name="Patient_Age" ColumnName="Patient_Age" />
+          <ScalarProperty Name="Patient_Disease" ColumnName="Patient_Disease" />
+          <ScalarProperty Name="Patient_Hospital" ColumnName="Patient_Hospital" />
+          <ScalarProperty Name="Patient_Country" ColumnName="Patient_Country" />
+          <ScalarProperty Name="Patient_State" ColumnName="Patient_State" />
+          <ScalarProperty Name="Patient_Id" ColumnName="Patient_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReviewDetails">
+      <EntityTypeMapping TypeName="EHealthCareModel.ReviewDetail">
+        <MappingFragment StoreEntitySet="ReviewDetails">
+          <ScalarProperty Name="User_Role" ColumnName="User_Role" />
+          <ScalarProperty Name="Raised_By" ColumnName="Raised_By" />
+          <ScalarProperty Name="Review_Date" ColumnName="Review_Date" />
+          <ScalarProperty Name="Review_Text" ColumnName="Review_Text" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Review_id" ColumnName="Review_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
